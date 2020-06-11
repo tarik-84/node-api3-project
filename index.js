@@ -3,10 +3,9 @@ const express = require('express')
 const logger = require('./middleware/logger')
 const userRouter = require('./users/userRouter')
 const postRouter= require('./posts/postRouter')
-const server = require('./server')
 const welcomeRouter = require('./welcome/welcome-router')
 
-
+const server = express()
 const port = process.env.PORT || 5000
 
 server.use(express.json())
